@@ -41,3 +41,8 @@ describe 'fizzbuzz' do
     expect(fizzbuzz(3)).to eq 'fizz'
   end
 ```
+
+# RSpec for Classes
+Testing classes is fundamentally similar to testing methods. However, classes perform a different job to methods. Instead of taking some arguments and giving a return value like a method, classes look after some data (state) with a common group of methods (behaviour).
+
+-> Rather than calling one method and check the return value, our example involves calling a number of methods that exercise the intended behaviour of the class.
