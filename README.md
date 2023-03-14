@@ -5,6 +5,8 @@ Write a test for:
 * Fringe examples for conditionals e.g. numerical limits
 * Each part of conditional e.g. <1> && <2> - write tests for the whole statement, for when only <1> == true and when <2>  == true
 
+Tip: Can add bugs to the code to test the tests after they've been written
+
 ## RSpec syntax
 
 ```shell
@@ -42,9 +44,13 @@ describe 'fizzbuzz' do
   end
 ```
 
-# RSpec for Classes
+## RSpec for Classes
 Testing classes is fundamentally similar to testing methods. However, classes perform a different job to methods. Instead of taking some arguments and giving a return value like a method, classes look after some data (state) with a common group of methods (behaviour).
 
--> Rather than calling one method and check the return value, our example involves calling a number of methods that exercise the intended behaviour of the class.
+> Rather than calling one method and check the return value, our example involves calling a number of methods that exercise the intended behaviour of the class.
 
-Note: Can add bugs to the code to test the tests after they've been written
+## RSpec for errors
+1. We use expect { ... } with curly braces, not parentheses.
+2. We put the code that throws the error inside the braces. This, combined with difference 1, 'wraps' this code in a special environment that means RSpec can 'catch' the error.
+2. We use raise_error instead of eq (equal).
+> The keywords raise_error and eq are both kinds of 'matcher'. RSpec supports many matchers. You don't need to know very many of them but they can be interesting to look up.
