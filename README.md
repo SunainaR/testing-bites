@@ -52,5 +52,5 @@ Testing classes is fundamentally similar to testing methods. However, classes pe
 ## RSpec for errors
 1. We use expect { ... } with curly braces, not parentheses.
 2. We put the code that throws the error inside the braces. This, combined with difference 1, 'wraps' this code in a special environment that means RSpec can 'catch' the error.
-2. We use raise_error instead of eq (equal).
+2. We use <code>raise_error</code> instead of <code>eq</code> (equal).
 > The keywords raise_error and eq are both kinds of 'matcher'. RSpec supports many matchers. You don't need to know very many of them but they can be interesting to look up.
