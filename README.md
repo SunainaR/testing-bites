@@ -32,3 +32,12 @@ end
 
 # But we only have one test suite per file.
 ```
+
+Alternatively, could use referental transparency for expect statement:
+
+```shell
+describe 'fizzbuzz' do
+  it 'returns "fizz" when passed 3' do
+    expect(fizzbuzz(3)).to eq 'fizz'
+  end
+```
