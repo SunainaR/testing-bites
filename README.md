@@ -1,4 +1,9 @@
 # testing-bites
+## RSpec Testing writing process
+Write a test for:
+* All branches of if statement
+* Fringe examples for conditionals e.g. numerical limits
+* Each part of conditional e.g. <1> && <2> - write tests for the whole statement, for when only <1> == true and when <2>  == true
 
 ## RSpec syntax
 
