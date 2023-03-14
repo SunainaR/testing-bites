@@ -1,6 +1,7 @@
 require 'counter'
 
 # I can know it's a class here in the spec file, because below uses the class rather than a string which is used for a method
+# Note: Write tests for different combinations of methods e.g. calling add no times or multiple times.
 RSpec.describe Counter do
   it "Shows me that I've counted to 13 after adding one value" do
     counter = Counter.new
