@@ -54,3 +54,24 @@ Testing classes is fundamentally similar to testing methods. However, classes pe
 2. We put the code that throws the error inside the braces. This, combined with difference 1, 'wraps' this code in a special environment that means RSpec can 'catch' the error.
 2. We use <code>raise_error</code> instead of <code>eq</code> (equal).
 > The keywords raise_error and eq are both kinds of 'matcher'. RSpec supports many matchers. You don't need to know very many of them but they can be interesting to look up.
+
+Example:
+
+```ruby
+# /lib/password_checker.rb
+class PasswordChecker
+  def check(password)
+    if password.length >= 8
+      return true
+    else
+      fail "Invalid password, must be 8+ characters."
+    end
+  end
+end
+
+# /lib/password_checker_spec.rb
+it "Password length is less than 8 characters" do
+    password = PasswordChecker.new
+    expect { password.check("1234567") }.to raise_error "Invalid password, must be 8+ characters."
+  end
+```
